@@ -31,7 +31,7 @@ int main(){
     }
 
     int W;
-    cout<<"ENTER THE CAPACITY OF THE KANPSACK:";
+    cout<<"ENTER THE CAPACITY OF THE KNAPSACK:";
     cin>>W;
 
     cout<<"THE MAX PROFIT THAT THE THIEF CAN MAKE IS:"<<knapsack(wt, val, W, n);
