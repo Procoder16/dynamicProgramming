@@ -4,6 +4,14 @@ using namespace std;
 bool t[100][100]; // make according to the constraints
 
 bool targetSum(int arr[], int sum, int n){
+    for(int i = 0; i <= n; i++){ // initialisation
+        t[i][0] = true;
+    }
+
+    for(int i = 1; i<=sum; i++){ // initialisation
+        t[0][i] = false;
+    }
+    
     for(int i = 1; i <= n; i++){
         for(int j = 1; j <= sum; j++){
             if(arr[i-1] <= j){
@@ -33,14 +41,6 @@ int main(){
     int sum;
     cout<<"ENTER THE TARGET SUM:";
     cin>>sum;
-
-    for(int i = 0; i <= n; i++){
-        t[i][0] = true;
-    }
-
-    for(int i = 1; i<=sum; i++){
-        t[0][i] = false;
-    }
 
     if(targetSum(arr, sum, n)){
         cout<<"A SUBSET WITH A GIVEN TARGET SUM IS PRESENT";
