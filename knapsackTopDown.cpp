@@ -3,7 +3,14 @@ using namespace std;
 int t[100][100];
 
 int knapsack(int wt[], int val[], int n, int W){
-    
+    for(int i = 0; i < n+1; i++){  // initialisation
+        t[i][0] = 0;
+    }
+
+    for(int i = 0; i < W+1; i++){   // initialisation
+        t[0][i] = 0;
+    }
+
     for(int i = 1; i < n+1; i++){
         for(int j = 1; j < W+1; j++){
             if(wt[i-1] <= j){
@@ -37,14 +44,7 @@ int main(){
     cout<<"ENTER THE CAPACITY OF THE KNAPSACK:";
     cin>>W;
 
-    for(int i = 0; i < n+1; i++){
-        t[i][0] = 0;
-    }
-
-    for(int i = 0; i < W+1; i++){
-        t[0][i] = 0;
-    }
-
+    
     cout<<"THE MAX PROFIT THAT THE THIEF CAN MAKE IS:"<<knapsack(wt, val, n, W);
 
     return 0;
