@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int t[100][100];
+int t[100][100]; // make according to the constraints
 
 int knapsack(int wt[], int val[], int n, int W){
     for(int i = 0; i < n+1; i++){  // initialisation
