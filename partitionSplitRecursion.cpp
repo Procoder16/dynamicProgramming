@@ -50,7 +50,7 @@ int main(){
         cout<<"THE ARRAY CAN BE SPLIT EASILY WITH EQUAL SUM";
     }
     else{
-        cout<<"THE ARRAY CANNOT BE SPLIT EASILY";
+        cout<<"THE ARRAY CANNOT BE SPLIT EQUALLY";
     }
 
     return 0;
