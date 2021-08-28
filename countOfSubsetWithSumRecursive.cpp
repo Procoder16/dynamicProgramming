@@ -14,7 +14,8 @@ int countSubsetsWithSum(int arr[], int n, int sum){
     }
 
     if(arr[n-1] <= sum){
-        return countSubsetsWithSum(arr, n-1, sum-arr[n-1]) + countSubsetsWithSum(arr, n-1, sum);
+        return countSubsetsWithSum(arr, n-1, sum-arr[n-1]) + countSubsetsWithSum(arr, n-1, sum);  
+        // adding both the components because there can be a case that if you include an item and getting the sum... and there can also be a case that u don't add but then also get a sum later on
     }
     else{
         return countSubsetsWithSum(arr, n-1, sum);
