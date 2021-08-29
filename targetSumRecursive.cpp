@@ -1,19 +1,37 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int targetSum(int n, int arr[], int sum){
-    if(n == 0 && sum == 0){
+int countOfSubsetWithSum(int n, int arr[], int sum){ // count of subset with given sum algorithm function
+    if(n == 0 && sum > 0){
+        return 0;
+    }
+    if(n > 0 && sum == 0){
         return 1;
     }
-    if(n == 0 && sum != 0){
-        return 0;
+    if(sum == 0 && n == 0){
+        return 1;
     }
 
-    if(n > 0 && sum == 0){
-        return 0;
+    if(arr[n-1] <= sum){
+        return countOfSubsetWithSum(n-1, arr, sum - arr[n-1]) + countOfSubsetWithSum(n-1, arr, sum);
+    }
+    else{
+        return countOfSubsetWithSum(n-1, arr, sum);
+    }
+}
+
+int countOfSubsetsWithDiff(int n, int arr[], int diff){
+
+    int totalSum = 0;
+    for(int i = 0; i < n; i++){
+        totalSum+=arr[i];
     }
 
-    return targetSum(n-1, arr, sum - arr[n-1]) + targetSum(n-1, arr, sum + arr[n-1]);
+    int reqdSum = (diff + totalSum)/2; // formula according to the algorithm discussed
+
+    int count = countOfSubsetWithSum(n, arr, reqdSum);  // count of subset with given sum algorithm function calling
+
+    return count;
 }
 
 int main(){
@@ -33,7 +51,7 @@ int main(){
     cout<<"ENTER THE TOTAL SUM THAT YOU YOU WANT TO GET:";
     cin>>sum;
 
-    cout<<"\nTHE COUNT OF ARRANGEMENTS WITH THE GIVEN SUM IS:"<<targetSum(n, arr, sum); // 0 is sent as the default current sum
+    cout<<"\nTHE COUNT OF ARRANGEMENTS WITH THE GIVEN SUM IS:"<<countOfSubsetsWithDiff(n, arr, sum); 
 
     return 0;
 }
