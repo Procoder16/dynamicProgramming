@@ -24,7 +24,7 @@ int main(){
     int price[n];
 
     cout<<"ENTER THE PRICES FOR THE "<<n<<" PIECES INDIVIDUALLY:";
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i < n; i++){
         cin>>price[i];
     }
 
