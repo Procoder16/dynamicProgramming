@@ -9,6 +9,10 @@ int targetSum(int n, int arr[], int sum){
         return 0;
     }
 
+    if(n > 0 && sum == 0){
+        return 0;
+    }
+
     return targetSum(n-1, arr, sum - arr[n-1]) + targetSum(n-1, arr, sum + arr[n-1]);
 }
 
