@@ -4,10 +4,10 @@ using namespace std;
 static int t[100][100];
 
 int countOfSubsetWithSumTopDown(int n, int arr[], int sum){ // count of subset with given sum algorithm function
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i <= n; i++){ //initialisation
         t[i][0] = 1;
     }
-    for(int i = 1; i <= sum; i++){
+    for(int i = 1; i <= sum; i++){ //initialisation
         t[0][i] = 0;
     }
 
