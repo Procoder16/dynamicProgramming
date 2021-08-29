@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int countOfSubsetWithSum(int n, int arr[], int sum){
+int countOfSubsetWithSum(int n, int arr[], int sum){ // count of subset with given sum algorithm function
     if(n == 0 && sum > 0){
         return 0;
     }
@@ -27,9 +27,9 @@ int countOfSubsetsWithDiff(int n, int arr[], int diff){
         totalSum+=arr[i];
     }
 
-    int reqdSum = (diff + totalSum)/2;
+    int reqdSum = (diff + totalSum)/2; // formula according to the algorithm discussed
 
-    int count = countOfSubsetWithSum(n, arr, reqdSum);
+    int count = countOfSubsetWithSum(n, arr, reqdSum);  // count of subset with given sum algorithm function calling
 
     return count;
 }
