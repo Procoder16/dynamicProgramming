@@ -25,7 +25,7 @@ int booleanParenthesization(string s, int i, int j, bool isTrue){
         int rT = booleanParenthesization(s, k + 1, j, true);
         int rF = booleanParenthesization(s, k + 1, j, false);
 
-        if(s[i] == '&'){
+        if(s[k] == '&'){
             if(isTrue){
                 ans += (lT * rT);
             }
@@ -33,7 +33,7 @@ int booleanParenthesization(string s, int i, int j, bool isTrue){
                 ans += (lT * rF) + (lF * rT) + (lF * rF);
             }
         }
-        else if(s[i] == '|'){
+        else if(s[k] == '|'){
             if(isTrue){
                 ans += (lT * rF) + (lF * rT) + (lT * rT);
             }
