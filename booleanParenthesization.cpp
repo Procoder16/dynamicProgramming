@@ -10,10 +10,10 @@ int booleanParenthesization(string s, int i, int j, bool isTrue){
 
     if(i == j){
         if(isTrue){
-            return s[i] == true;
+            return s[i] == 'T';
         }
         else{
-            return s[i] == false;
+            return s[i] == 'F';
         }
     }
 
