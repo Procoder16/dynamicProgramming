@@ -46,7 +46,7 @@ int main(){
     int n = x.length();
     int m = y.length();
 
-    cout<<"LENGTH OF THE LONGEST SUBSEQUENCE POSSIBLE:"<<lcsTopDown(x, y, n, m);
+    cout<<"LENGTH OF THE LONGEST SUBSTRING POSSIBLE:"<<lcsTopDown(x, y, n, m);
 
     return 0;
 }
