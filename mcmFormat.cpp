@@ -1,3 +1,5 @@
+//Matrix chain multiplication format
+
 #include<iostream>
 using namespace std;
 
