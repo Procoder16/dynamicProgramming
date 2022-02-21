@@ -1,3 +1,5 @@
+//knapsack using top down method
+
 #include<bits/stdc++.h>
 using namespace std;
 int t[100][100]; // make according to the constraints
