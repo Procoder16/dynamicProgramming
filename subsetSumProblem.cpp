@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 bool targetSum(int arr[], int sum, int n){
@@ -20,7 +20,7 @@ bool targetSum(int arr[], int sum, int n){
     else{
         return targetSum(arr, sum, n-1);
     }
-} 
+}
 
 int main(){
 
