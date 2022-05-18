@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 bool t[100][100]; // make according to the constraints
