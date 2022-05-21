@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 static bool t[100][100]; // dynamic programming actual matrix; size according to the contraints 
