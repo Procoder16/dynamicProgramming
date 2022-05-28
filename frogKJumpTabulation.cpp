@@ -5,18 +5,18 @@ int frogKJumpRec(int arr[], int k, int n){
     int dp[n];
     dp[0] = 0;
 
-    int minEnergy = INT_MAX;
-
     for(int i = 1; i < n; i++){
+        int minEnergy = INT_MAX;
         for(int j = 1; j <= k; j++){
             if(i - j >= 0){
                 int energy = dp[i - j] + abs(arr[i] - arr[i - j]);
                 minEnergy = min(minEnergy, energy);
             }
         }
+        dp[i] = minEnergy;
     }
 
-    return minEnergy;
+    return dp[n-1];
 }
 
 int main(){
