@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 int countOfSubsetWithSum(int n, int arr[], int sum){ // count of subset with given sum algorithm function
