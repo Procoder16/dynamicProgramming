@@ -1,6 +1,6 @@
 //Longest Common subsequence using top down method
 
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 int t[100][100];
